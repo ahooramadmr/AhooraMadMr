@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ورود به بخش مودها</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:tahoma;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#7c3aed);
+    overflow:hidden;
+}
+
+/* ستاره‌ها */
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(white 1px,transparent 1px);
+    background-size:40px 40px;
+    opacity:.35;
+    animation:move 25s linear infinite;
+}
+
+@keyframes move{
+    from{transform:translateY(0);}
+    to{transform:translateY(-200px);}
+}
+
+.btn{
+    position:relative;
+    text-decoration:none;
+    color:#fff;
+    font-size:32px;
+    font-weight:bold;
+    padding:28px 65px;
+    border-radius:80px;
+    background:linear-gradient(45deg,#00e5ff,#7c4dff,#ff00ff);
+    background-size:300% 300%;
+    animation:gradient 4s ease infinite;
+    box-shadow:0 0 30px #00e5ff,
+               0 0 60px #7c4dff,
+               0 0 100px #ff00ff;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.12) rotate(-2deg);
+    box-shadow:0 0 50px #00ffff,
+               0 0 100px #ff00ff,
+               0 0 150px #ffffff;
+}
+
+.btn::before{
+    content:"✨";
+    margin-left:12px;
+}
+
+.btn::after{
+    content:"🚀";
+    margin-right:12px;
+}
+
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+</style>
+
+</head>
+<body>
+
+<a class="btn" href="https://ahooramadmr.github.io">
+ورود به بخش مودها
+</a>
+
+</body>
+</html>
